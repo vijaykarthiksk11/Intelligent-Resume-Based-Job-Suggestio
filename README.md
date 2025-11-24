@@ -1,43 +1,47 @@
-#Intelligent Resume-Based Job Suggestion & Skill-Gap Analysis System
-Using AWS Bedrock, RAG Architecture, and Streamlit
-#🚀 Overview
+Intelligent Resume-Based Job Suggestion & Skill-Gap Analysis System Using AWS Bedrock, RAG Architecture, and Streamlit
+🚀 Overview
 
 Traditional job portals rely on keyword matching and fail to understand the deeper context of a candidate’s skills.
-This project builds an AI-powered job recommendation system that analyzes resumes, retrieves live job data, detects skill gaps, and provides personalized career recommendations using:
+This project builds an AI-powered job recommendation system that:
+
+Analyzes resumes
+
+Retrieves live job data
+
+Detects skill gaps
+
+Provides personalized career recommendations
+
+Using:
 
 AWS Bedrock (Claude 3.5, Titan Embeddings)
 
-RAG (Retrieval-Augmented Generation) architecture
+RAG (Retrieval-Augmented Generation)
 
 AWS Lambda + S3 + API Gateway
 
-MongoDB Atlas vector search
+MongoDB Atlas Vector Search
 
 Streamlit Dashboard
 
-The system generates contextual job matches, skill-gap insights, and recommended learning paths.
+🧠 Key Features
+Intelligent Resume Parsing
 
-#🧠 Key Features
-1. Intelligent Resume Parsing
+Upload resume (PDF/DOCX) via Streamlit
 
-Upload resume (PDF/DOCX) via Streamlit.
+Stored in S3 → processed via Lambda
 
-Stored in S3 → processed automatically via Lambda.
+AWS Textract & Comprehend extract text
 
-AWS Textract & Comprehend extract structured text.
+Claude summarizes roles, skills, achievements
 
-Claude summarizes roles, skills, achievements.
+Embedding & RAG Layer
 
-2. Embedding & RAG Layer
+Titan Embeddings generate semantic vectors
 
-Titan Embeddings generate semantic vectors for resumes & jobs.
+RAG retrieves top-k relevant job documents
 
-RAG retrieves top-k relevant job documents from job APIs + vector DB.
-
-3. Hybrid Job Ranking Engine
-
-A multi-weight scoring formula:
-
+Hybrid Job Ranking Engine
 final_score =
 0.55 * semantic_similarity +
 0.25 * keyword_overlap +
@@ -45,59 +49,58 @@ final_score =
 0.10 * popularity_score
 
 
-Detects missing skills.
+Detects missing skills
 
-Generates “Why this job matches you”.
+Generates “Why this job matches you”
 
-4. Streamlit Dashboard
+Streamlit Dashboard
 
-Top 20 job recommendations.
+Top 20 job recommendations
 
-Skill-gap heatmap.
+Skill-gap heatmap
 
-Recommended courses (Coursera API).
+Recommended courses (Coursera API)
 
-Daily refresh → triggers Lambda.
+Daily refresh → triggers Lambda
 
-5. Continuous Learning
+Continuous Learning
 
-User feedback (like/dislike) adjusts ranking weights over time.
+User feedback (like/dislike) updates ranking weights
 
-#🏗️ System Architecture
+🏗️ System Architecture
 Streamlit → S3 → Lambda → Textract/Bedrock → MongoDB (Vector DB)
                     ↓
              Job APIs (Adzuna/JSearch)
                     ↓
                Ranking Engine
                     ↓
-              Streamlit Dashboard
+            Streamlit Dashboard
 
 
 All modules are event-driven and follow a serverless pipeline.
-#📂 Datasets / Data Sources
-1. Resume Dataset
+
+📂 Datasets / Data Sources
+Resume Dataset
 
 Source: User upload
 
 Format: PDF / DOCX
 
-Stored in: S3 → processed via Textract
+Stored in S3 → processed via Textract
 
-Fields Extracted:
+Extracted Fields:
 
 Name, email, phone
 
 Education
 
-Skills (technical/non-technical)
+Skills
 
 Work experience
 
 Achievements
 
-2. Job Dataset (Live Job APIs)
-
-Sources:
+Job Dataset (Live APIs)
 
 Adzuna API
 
@@ -121,17 +124,17 @@ Location
 
 Vector embeddings
 
-3. Internal Skill Corpus
+Internal Skill Corpus
 
 Generated using Claude on Bedrock
-
 Used for:
 
 Skill normalization
 
-Mapping skills → categories
+Skills → category mapping
 
-Skill gap detection
+Skill-gap detection
+
 ⚙️ Workflow Summary
 Stage 1 — Resume Upload
 
@@ -149,7 +152,7 @@ Stage 4 — Ranking
 
 Semantic matching
 
-Skill gap analysis
+Skill-gap analysis
 
 Weighted scoring
 
@@ -162,7 +165,8 @@ Job match insights
 Skill heatmap
 
 Course recommendations
-#🌐 Business Use Cases
+
+🌐 Business Use Cases
 
 Automated resume screening (HR)
 
@@ -173,3 +177,5 @@ E-learning + course recommendations
 Internal job mobility for enterprises
 
 AI career assistant bots
+
+If you want, I can also format the entire README with tables, icons, badges, and TOC (Table of Contents).
