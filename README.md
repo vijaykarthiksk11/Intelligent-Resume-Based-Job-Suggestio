@@ -1,4 +1,5 @@
 Intelligent Resume-Based Job Suggestion & Skill-Gap Analysis System Using AWS Bedrock, RAG Architecture, and Streamlit
+
 🚀 Overview
 
 Traditional job portals rely on simple keyword matching and fail to understand the deeper context of a candidate’s skills.
