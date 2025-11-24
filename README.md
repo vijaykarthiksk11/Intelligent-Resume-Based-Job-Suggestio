@@ -1,6 +1,6 @@
-Intelligent Resume-Based Job Suggestion & Skill-Gap Analysis System
+#Intelligent Resume-Based Job Suggestion & Skill-Gap Analysis System
 Using AWS Bedrock, RAG Architecture, and Streamlit
-🚀 Overview
+#🚀 Overview
 
 Traditional job portals rely on keyword matching and fail to understand the deeper context of a candidate’s skills.
 This project builds an AI-powered job recommendation system that analyzes resumes, retrieves live job data, detects skill gaps, and provides personalized career recommendations using:
@@ -17,7 +17,7 @@ Streamlit Dashboard
 
 The system generates contextual job matches, skill-gap insights, and recommended learning paths.
 
-🧠 Key Features
+#🧠 Key Features
 1. Intelligent Resume Parsing
 
 Upload resume (PDF/DOCX) via Streamlit.
@@ -63,7 +63,7 @@ Daily refresh → triggers Lambda.
 
 User feedback (like/dislike) adjusts ranking weights over time.
 
-🏗️ System Architecture
+#🏗️ System Architecture
 Streamlit → S3 → Lambda → Textract/Bedrock → MongoDB (Vector DB)
                     ↓
              Job APIs (Adzuna/JSearch)
@@ -74,7 +74,7 @@ Streamlit → S3 → Lambda → Textract/Bedrock → MongoDB (Vector DB)
 
 
 All modules are event-driven and follow a serverless pipeline.
-📂 Datasets / Data Sources
+#📂 Datasets / Data Sources
 1. Resume Dataset
 
 Source: User upload
@@ -162,7 +162,7 @@ Job match insights
 Skill heatmap
 
 Course recommendations
-🌐 Business Use Cases
+#🌐 Business Use Cases
 
 Automated resume screening (HR)
 
