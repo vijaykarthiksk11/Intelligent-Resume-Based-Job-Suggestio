@@ -1,0 +1,6 @@
+pymupdf>=1.23.0       # Fully supports Python 3.11
+python-docx>=0.8.11   # Supports all Python 3.x including 3.11
+pymongo>=4.6.0        # Officially supports Python 3.11
+python-dateutil>=2.9.0
+requests>=2.31.0
+openai>=1.58.1        # New client, Python 3.11 supported
